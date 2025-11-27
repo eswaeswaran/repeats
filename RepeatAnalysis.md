@@ -74,7 +74,7 @@ chmod +x /vol/storage/Eswaran/Classification_Repeats/Scripts/Abel-RepeatModel2DF
 ```
 
 
-# DO REPEAT ANNOTATION 
+#  REPEAT ANNOTATION 
 On de novo database for Great Tit
 Script for RepeatMasker2
 
