@@ -1,2 +1,2 @@
 # repeats
-Long Time Retention of Transposable Elements and Their Regulatory Implications in the Great Tit
+Compositional dynamics and genomic distribution of transposable elements in the great tit (Parus major )
