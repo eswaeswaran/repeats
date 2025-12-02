@@ -90,14 +90,3 @@ exit
 ubuntu@eswarrijah-1c7c1:~$ chmod +x /vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash
 /vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash &>/vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash.out &
 exit
-
-
-
-
-
-
-
-
-
-
-
