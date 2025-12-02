@@ -1,6 +1,5 @@
 # Generate a de novo repeat library using RepeatModeler2
 
-Script for RepeatModeler2:
 
 ```bash
 rm -r /path/to/your/scripts
@@ -33,7 +32,7 @@ exit
 
 #  Repeat Annotation using RepeatMasker2
 On de novo database 
-Script for RepeatMasker2
+
 
 ```bash
 nano  /path/to/your/scripts/scriptname.bash
@@ -62,10 +61,35 @@ exit
 
 
 ```
+On a DFAM database
 
+```bash
+nano  /path/to/your/scripts/scriptname.bash
+====================================================================
+rm -r /path/to/your/species/RepeatMaskerDFAM
+mkdir /path/to/your/species/RepeatMaskerDFAM
 
+cd /path/to/your/species/RepeatMaskerDFAM
+zcat /path/to/genome/species_genomic.fna.gz >/path/to/your/species/RepeatMaskerDFAM/species_genomic.fna
+/path/to/Programs/RepeatMasker/RepeatMasker -e hmmer -gccalc -s -a -pa 28 -species aves /path/to/your/species/RepeatMaskerDFAM/species_genomic.fna
 
+GENOMESIZE=`grep -v ">" /path/to/your/species/RepeatMaskerDFAM/species_genomic.fna | perl -pe -chomp | wc -m`
 
+perl /path/to/Programs/RepeatMasker/util/calcDivergenceFromAlign.pl -s
+/path/to/your/species/RepeatMaskerDFAM/species_genomic.fna.divsum -a  
+/path/to/your/species/RepeatMaskerDFAM/species_genomic.fna.GC-Adjusted.align
+/path/to/your/species/RepeatMaskerDFAM/species_genomic.fna.align
+perl /path/to/Programs/RepeatMasker/util/createRepeatLandscape.pl -div
+/path/to/your/species/RepeatMaskerDFAM/species_genomic.fna.divsum -t "Species Name (DFAM) Repeat Landscape" -g $GENOMESIZE > /path/to/your/species/RepeatMaskerDFAM/species_repeat_landscape.html
+echo 'Job Complete'
+====================================================================
+chmod +x /vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash
+/vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash &>/vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash.out &
+exit
+--------------------------------------------------------------------
+ubuntu@eswarrijah-1c7c1:~$ chmod +x /vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash
+/vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash &>/vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash.out &
+exit
 
 
 
