@@ -104,7 +104,7 @@ exit
 #use default settings
 /path/to/your/sequence/fasta_file
 
-# Repeat Evolutio: Base composition
+# Repeat Evolution: Base composition
 
 #get nucleotide composition of repeat and consensus (ancestral) sequences 
 
