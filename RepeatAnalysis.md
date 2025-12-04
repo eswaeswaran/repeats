@@ -93,12 +93,29 @@ exit
 
 ```
 
-# Repeat activity analysis based on Open Reading Frame (ORF) length
+# Repeat Activity: Analysis based on Open Reading Frame (ORF) length
 
 #generate fasta files of repeats and repeat consensus (ancestral sequences)
 
 ```bash
- getfasta -fi /path/to/your/genome -bed /path/to/your/bed_file -fo /path/to/your/fasta_file.fa
+ getfasta -fi /path/to/your/genome -bed /path/to/your/repeat/sequences.bed -fo /path/to/output/sequences.fa
 ```
 #to get ORFs: input fasta file online on https://www.bioinformatics.nl/cgi-bin/emboss/getorf
 #use default settings
+/path/to/your/sequence/fasta_file
+
+# Repeat Evolutio: Base composition
+
+#get nucleotide composition of repeat and consensus (ancestral) sequences 
+
+```bash
+seqtk comp /path/to/your/repeat/sequences.fa > /path/to/your/output/folder
+```
+
+
+
+# Functional Analaysis: Binding motif analysis using HOMER
+```bash
+findMotifs.pl /path/to/repeat/sequences.fa fasta /path/to/output/folder -fasta /path/to/background/repeat/sequences.fa -p 8
+
+```
