@@ -90,3 +90,15 @@ exit
 ubuntu@eswarrijah-1c7c1:~$ chmod +x /vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash
 /vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash &>/vol/storage/Eswaran/Classification_Repeats/Scripts/DFAM_GT_Abel-RepeatMaskerRM2.0.4DFAM3.7Aves.bash.out &
 exit
+
+```
+
+# Repeat activity analysis based on Open Reading Frame (ORF) length
+
+#generate fasta files of repeats and repeat consensus (ancestral sequences)
+
+```bash
+ getfasta -fi /path/to/your/genome -bed /path/to/your/bed_file -fo /path/to/your/fasta_file.fa
+```
+#to get ORFs: input fasta file online on https://www.bioinformatics.nl/cgi-bin/emboss/getorf
+#use default settings
