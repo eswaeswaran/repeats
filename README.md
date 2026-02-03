@@ -16,7 +16,7 @@ The analysis uses tools such as **RepeatModeler2**, **RepeatMasker2**, **seqtk**
 
 ## Requirements
 
-- [Python (tested with 3.12.3, other versions may also work)]  
+- Python (tested with 3.12.3, other versions may also work)
 - Bioinformatics software:
   - [RepeatModeler2]  
   - [RepeatMasker2]
