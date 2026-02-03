@@ -18,8 +18,8 @@ The analysis uses tools such as **RepeatModeler2**, **RepeatMasker2**, **seqtk**
 
 - Python (tested with 3.12.3, other versions may also work)
 - Bioinformatics software:
-  - [RepeatModeler2]  
-  - [RepeatMasker2]
+  - RepeatModeler2  
+  - RepeatMasker2
   - [seqtk](https://github.com/lh3/seqtk)  
   - [HOMER](http://homer.ucsd.edu/homer/)  
 - Standard Unix utilities (`bash`, `grep`, `wc`, `perl`)  
